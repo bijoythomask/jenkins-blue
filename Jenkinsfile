@@ -1,5 +1,10 @@
 pipeline {
-  agent any
+  agent {
+    docker {
+      image 'ubuntu:latest'
+    }
+
+  }
   stages {
     stage('Init') {
       steps {
